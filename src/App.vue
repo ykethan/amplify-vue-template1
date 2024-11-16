@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import Todos from './components/Todos.vue'
+import '@aws-amplify/ui-vue/styles.css';
+import MainLayout from '@/layouts/Main.vue';
 </script>
 
 <template>
-  <main>
-    <Todos />
-  </main>
+  <MainLayout>
+    <RouterView />
+  </MainLayout>
 </template>
-

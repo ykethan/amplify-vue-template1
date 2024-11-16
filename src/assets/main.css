@@ -1,65 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
-  background: linear-gradient(180deg, rgb(117, 81, 194), rgb(255, 255, 255));
-  display: flex;
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  height: 100vh;
-  width: 100vw;
-  justify-content: center;
-  align-items: center;
+  background: white;
+  font-family:
+    Roboto Flex,
+    sans-serif;
 }
 
 main {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-  color: white;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-ul {
-  padding-inline-start: 0;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  margin: 8px 0;
-  border: 1px solid black;
-  gap: 1px;
-  background-color: black;
-  border-radius: 8px;
-  overflow: auto;
-}
-
-li {
-  background-color: white;
-  padding: 8px;
-}
-
-li:hover {
-  background: #dadbf9;
+  height: 100vh;
+  /* width: 100vw; */
+  /* max-width: 2352px; */
+  /* justify-content: center; */
 }
 
 a {
-  font-weight: 800;
+  font-weight: 400;
   text-decoration: none;
+  color: #5844ff;
+}
+
+@layer components {
+  p {
+    @apply text-lg text-[14px];
+  }
+  .btn-primary {
+    @apply font-semibold text-white bg-purple-100 py-2xs px-sm rounded-xs hover:bg-purple-dark focus:outline-none focus:ring;
+  }
+  .btn-primary:disabled {
+    @apply cursor-not-allowed bg-purple-60;
+  }
+  .btn-outline {
+    @apply py-2xs px-sm  bg-none text-purple-100 font-semibold rounded-xs border-purple-100 border-2 focus:ring;
+  }
+  .input-default {
+    @apply bg-white border border-purple-100 py-xs px-sm rounded-xs focus:outline-1 focus:outline-purple-dark;
+  }
+  .input-default:disabled {
+    @apply opacity-30 cursor-not-allowed;
+  }
+  a {
+    @apply text-purple-100 font-[14px] hover:text-purple-dark;
+  }
+}
+
+.p-menuitem {
+  @apply hover:bg-purple-20 rounded-xs py-[2px] hover:cursor-pointer;
+}
+
+.p-menuitem-active {
+  @apply bg-purple-20 rounded-xs;
 }
