@@ -6,8 +6,7 @@
     "src/**/*.vue",
     "src/**/*.tsx",
     "src/**/*.ts",
-    "amplify/data/resource.ts",
-    "amplify/auth/pre-sign-up/resource.ts"
+    "amplify/data/resource.ts"
   ],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
