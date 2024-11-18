@@ -4,8 +4,6 @@
     "env.d.ts",
     "src/**/*",
     "src/**/*.vue",
-    "amplify/**/*",
-    ".amplify/**/*",
     "src/**/*.tsx",
     "src/**/*.ts",
     "amplify/data/resource.ts",
