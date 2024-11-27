@@ -7,7 +7,7 @@ import { preSignUp } from './pre-sign-up/resource';
  */
 export const auth = defineAuth({
   loginWith: {
-    email: true,
+    phone: true,
   },
 
   triggers: {
